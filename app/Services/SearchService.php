@@ -213,6 +213,8 @@ class SearchService
                 $this->$functionName($entitySelect, $entity, $filterValue);
             }
         }
+        
+        var_dump($query);
 
         return $this->permissionService->enforceEntityRestrictions($entityType, $entitySelect, $action);
     }
