@@ -96,6 +96,8 @@ class SearchService
             $results = $results->merge($search);
         }
 
+        print_r($search);
+
         return [
             'total' => $total,
             'count' => count($results),
@@ -214,7 +216,7 @@ class SearchService
             }
         }
         
-        var_dump($query);
+        print_r($query);
 
         return $this->permissionService->enforceEntityRestrictions($entityType, $entitySelect, $action);
     }
